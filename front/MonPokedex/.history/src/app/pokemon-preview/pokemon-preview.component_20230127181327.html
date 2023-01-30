@@ -1,0 +1,27 @@
+<!--<div class="Pokemon-Preview-card">
+<h2>{{PokemonPreview.name}}</h2>
+<p>Description : {{PokemonPreview.description}}</p>
+<p>Type : {{PokemonPreview.type}}</p>
+<p>Région : {{PokemonPreview.region}}</p>
+<p>N°{{PokemonPreview.pokedexNumber}}</p>
+<div>
+    <img [src]="PokemonPreview.img" [alt]="PokemonPreview.name">
+</div>-->
+import { MatCardModule } from '@angular/material/card';
+<mat-card class="Pokemon-Preview-card">
+    <mat-card-header>
+      <div mat-card-avatar class=AvatarCard></div>
+      <mat-card-title>{{PokemonPreview.name}}</mat-card-title>
+      <mat-card-subtitle>{{PokemonPreview.region}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]="PokemonPreview.img" [alt]="PokemonPreview.name">
+    <mat-card-content>
+      <p>
+        {{PokemonPreview.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-button>Capturer</button>
+      <button mat-button>Fuire</button>
+    </mat-card-actions>
+  </mat-card>
